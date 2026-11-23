@@ -20,6 +20,60 @@ The sign-in screens have buttons that fill these in. The demo is seeded with app
 waiting for review, a rejected, a suspended and a banned member, open message requests and an audit history.
 The moderator's **Members → Reset demo** button restores this starting state.
 
+## Screenshots
+
+<table>
+<tr>
+<td align="center"><img src="docs/screenshots/1-discover-phone.png" width="200" alt="Discover"><br>Discover</td>
+<td align="center"><img src="docs/screenshots/2-profile-phone.png" width="200" alt="Member profile"><br>Member profile</td>
+<td align="center"><img src="docs/screenshots/3-under-review-phone.png" width="200" alt="Under review"><br>Under review</td>
+<td align="center"><img src="docs/screenshots/5-changes-requested-phone.png" width="200" alt="Changes requested"><br>Changes requested</td>
+</tr>
+</table>
+
+<img src="docs/screenshots/4-moderator-review-desktop.png" alt="Moderator review queue">
+
+## Designs
+
+The app follows this 16-screen app flow: 13 member screens and 3 moderator and admin screens.
+
+<table>
+<tr>
+<td align="center"><img src="docs/designs/01-welcome.png" width="180" alt="Welcome"><br>01 Welcome</td>
+<td align="center"><img src="docs/designs/02-create-account.png" width="180" alt="Create account and consents"><br>02 Create account and consents</td>
+<td align="center"><img src="docs/designs/03-photo-video.png" width="180" alt="Photo and video verification"><br>03 Photo and video verification</td>
+<td align="center"><img src="docs/designs/04-under-review.png" width="180" alt="Under review"><br>04 Under review (invisible)</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/designs/05-changes-requested.png" width="180" alt="Changes requested"><br>05 Changes requested</td>
+<td align="center"><img src="docs/designs/06-discover.png" width="180" alt="Discover and filters"><br>06 Discover and filters</td>
+<td align="center"><img src="docs/designs/07-member-profile.png" width="180" alt="Member profile"><br>07 Member profile</td>
+<td align="center"><img src="docs/designs/08-message-requests.png" width="180" alt="Message requests"><br>08 Message requests</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/designs/09-conversation.png" width="180" alt="Conversation"><br>09 Conversation</td>
+<td align="center"><img src="docs/designs/10-block-report.png" width="180" alt="Block and report"><br>10 Block and report</td>
+<td align="center"><img src="docs/designs/11-membership.png" width="180" alt="Membership"><br>11 Membership</td>
+<td align="center"><img src="docs/designs/12-privacy.png" width="180" alt="Privacy and your data"><br>12 Privacy and your data</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/designs/13-suspended.png" width="180" alt="Account suspended"><br>13 Account suspended</td>
+<td></td><td></td><td></td>
+</tr>
+</table>
+
+**14 Moderator review queue**
+
+<img src="docs/designs/14-mod-review.png" alt="Moderator review queue">
+
+**15 Reports and safety**
+
+<img src="docs/designs/15-mod-reports.png" alt="Reports and safety">
+
+**16 Admin: members and audit log**
+
+<img src="docs/designs/16-admin-members.png" alt="Admin members and audit log">
+
 ## Security model
 
 Visibility is enforced in the database, not in the screens. Calling the API directly gives the same answer as the app.
