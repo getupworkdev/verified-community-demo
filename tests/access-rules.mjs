@@ -409,7 +409,8 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
   .pass { background: #e6efe9; color: #2f5d47; font-weight: 600; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
   .fail { background: #f8e4df; color: #a63d2a; font-weight: 600; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
   .note { background: #fff; border: 1px solid #e7e1d8; border-radius: 12px; padding: 14px 18px; margin-top: 18px; line-height: 1.55; }
-  @media print { body { background: #fff; padding: 0; } .box, table, .note { border-color: #ddd; } }
+  * { box-sizing: border-box; }
+  @media print { main { max-width: none; } body { background: #fff; padding: 0; } .box, table, .note { border-color: #ddd; } }
 </style></head><body><main>
 <h1>Access rules test report</h1>
 <p class="muted">[Community name] · verified community demo · run ${esc(when)}</p>

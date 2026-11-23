@@ -20,8 +20,11 @@ const desktop = { viewport: { width: 1366, height: 900 }, deviceScaleFactor: 1 }
 async function ctx(opts) {
   const c = await browser.newContext(opts);
   const p = await c.newPage();
-  p.on('pageerror', (e) => problems.push(`pageerror ${p.url()}: ${e.message}`));
-  p.on('console', (m) => { if (m.type() === 'error' && !/favicon|Failed to load resource.*(404|400)/.test(m.text())) problems.push(`console ${p.url()}: ${m.text()}`); });
+  // WebKit reports requests cancelled by a navigation as "access control checks" / "Load failed";
+  // those are not failures (checked separately with a settled page).
+  const aborted = (t) => ENGINE === webkit && /due to access control checks|Load failed/.test(t);
+  p.on('pageerror', (e) => { if (!aborted(e.message)) problems.push(`pageerror ${p.url()}: ${e.message}`); });
+  p.on('console', (m) => { if (m.type() === 'error' && !aborted(m.text()) && !/favicon|Failed to load resource.*(404|400)/.test(m.text())) problems.push(`console ${p.url()}: ${m.text()}`); });
   return p;
 }
 let n = 0;
