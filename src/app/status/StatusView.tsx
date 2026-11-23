@@ -54,7 +54,7 @@ export function StatusView({ s }: { s: MyStatus }) {
         <div className="stack mt-auto">
           <Link className="btn btn-outline" href="/join/details">Edit my profile</Link>
           <Link className="btn btn-ghost" href="/join/media">Change photo or video</Link>
-          <p className="small muted center">Changing your photo or video sends it back for review. We&apos;ll email you when you&apos;re approved.</p>
+          <p className="small muted center">Changing your photo or video sends it back for review. You&apos;ll see it here when you&apos;re approved (email notifications come in the full build).</p>
           <SignOut />
         </div>
       </main>

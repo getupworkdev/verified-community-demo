@@ -68,7 +68,7 @@ export default function Messages() {
               <Link href={`/members/${c.other_id}`} className="small" style={{ alignSelf: 'flex-start' }}>View {c.other_name}&apos;s profile</Link>
             </div>
           ))}
-          <p className="small muted center">Declining is private: the other person isn&apos;t told. We email you when a new request arrives.</p>
+          <p className="small muted center">Declining is private: the other person isn&apos;t told. New requests appear here (email notifications come in the full build).</p>
         </>
       ) : (
         <div className="list">
